@@ -17,10 +17,10 @@ public class Main {
         long salesMin = StatsService.minimumSalesMonth(sales);
         System.out.println(salesMin);
 
-        long belowTheAverage = StatsService.belowTheAverage(sales, averageSum);
+        long belowTheAverage = StatsService.belowTheAverage(sales);
         System.out.println(belowTheAverage);
 
-        long aboveTheAverage = StatsService.aboveTheAverage(sales, averageSum);
+        long aboveTheAverage = StatsService.aboveTheAverage(sales);
         System.out.println(aboveTheAverage);
     }
 }

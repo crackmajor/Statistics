@@ -42,7 +42,12 @@ public class StatsService {
         return salesMin + 1;
     }
 
-    public static long belowTheAverage(long[] sales, long averageSum) {//Кол-во месяцев, в которых продажи были ниже среднего
+    public static long belowTheAverage(long[] sales) {//Кол-во месяцев, в которых продажи были ниже среднего
+        long averageSum = 0;
+        for (long sale : sales) {
+            averageSum += sale;
+        }
+        averageSum = averageSum / 12;
         int lowsalesnumber = 0;
         for (long sale : sales) {
             if (averageSum > sale) {
@@ -51,7 +56,13 @@ public class StatsService {
         }
         return lowsalesnumber;
     }
-    public static long aboveTheAverage(long[] sales, long averageSum) {//Кол-во месяцев, в которых продажи были выше среднего
+
+    public static long aboveTheAverage(long[] sales) {//Кол-во месяцев, в которых продажи были выше среднего
+        long averageSum = 0;
+        for (long sale : sales) {
+            averageSum += sale;
+        }
+        averageSum = averageSum / 12;
         int highsalesnumber = 0;
         for (long sale : sales) {
             if (averageSum < sale) {
