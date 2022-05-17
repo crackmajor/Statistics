@@ -5,22 +5,22 @@ public class Main {
         StatsService service = new StatsService();
         long[] sales = {88, 2, 3, 4, 5, 6, 50, 8, 88, 10, 11, 12};
 
-        long sum = StatsService.TotalOfAllSales(sales);
+        long sum = service.TotalOfAllSales(sales);
         System.out.println(sum);
 
-        long averageSum = StatsService.AverageSalesPerMonth(sales);
+        long averageSum = service.AverageSalesPerMonth(sales);
         System.out.println(averageSum);
 
-        long salesMax = StatsService.peakSalesMonth(sales);
+        long salesMax = service.peakSalesMonth(sales);
         System.out.println(salesMax);
 
-        long salesMin = StatsService.minimumSalesMonth(sales);
+        long salesMin = service.minimumSalesMonth(sales);
         System.out.println(salesMin);
 
-        long belowTheAverage = StatsService.belowTheAverage(sales);
+        long belowTheAverage = service.belowTheAverage(sales);
         System.out.println(belowTheAverage);
 
-        long aboveTheAverage = StatsService.aboveTheAverage(sales);
+        long aboveTheAverage = service.aboveTheAverage(sales);
         System.out.println(aboveTheAverage);
     }
 }
