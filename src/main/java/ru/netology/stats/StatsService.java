@@ -43,11 +43,7 @@ public class StatsService {
     }
 
     public static long belowTheAverage(long[] sales) {//Кол-во месяцев, в которых продажи были ниже среднего
-        long averageSum = 0;
-        for (long sale : sales) {
-            averageSum += sale;
-        }
-        averageSum = averageSum / 12;
+        long averageSum = StatsService.AverageSalesPerMonth(sales);
         int lowsalesnumber = 0;
         for (long sale : sales) {
             if (averageSum > sale) {
@@ -58,11 +54,7 @@ public class StatsService {
     }
 
     public static long aboveTheAverage(long[] sales) {//Кол-во месяцев, в которых продажи были выше среднего
-        long averageSum = 0;
-        for (long sale : sales) {
-            averageSum += sale;
-        }
-        averageSum = averageSum / 12;
+        long averageSum = StatsService.AverageSalesPerMonth(sales);
         int highsalesnumber = 0;
         for (long sale : sales) {
             if (averageSum < sale) {
